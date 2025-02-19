@@ -1,0 +1,769 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('./img/eric-muhr-u3bQ0jywxz4-unsplash.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Intro Section */
+.intro {
+    width: 90%;
+    max-width: 1200px;
+    height: 300px;
+    margin: 80px auto 20px;
+    /* Adjust top margin to prevent overlap */
+    padding: 40px;
+    text-align: center;
+    color: rgb(218, 214, 214);
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent white */
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.intro:hover {
+    background: rgba(255, 255, 255, 0.6);
+    /* More white on hover */
+    color: black;
+    /* Optional: Change text color for better visibility */
+    transform: scale(1.02);
+}
+
+/* About Section */
+.about {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 40px;
+    background: url('./img/about.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+/* Overlay */
+.overlay {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Content Box */
+.about-content {
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.about-content:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Title Styling */
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about {
+        height: auto;
+        padding: 50px 5%;
+    }
+
+    .about-content {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar-nav {
+        gap: 0;
+        text-align: center;
+    }
+
+    /* Intro Section */
+    .intro {
+        height: 250px;
+        padding: 30px;
+    }
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    /* About Section */
+    .about {
+        height: auto;
+        padding: 40px 5%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        height: 200px;
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        padding: 30px 5%;
+    }
+
+    .about-content {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* Main Container */
+.what-we-do-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    /* position: relative; */
+    padding: 40px 20px;
+}
+
+/* Background Image */
+.image-container {
+    width: 100%;
+    min-height: 500px;
+    /* Adjust as needed */
+    background: url('./img/destin.jpg') no-repeat center center/cover;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Cards Overlay */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+    gap: 20px;
+    /* padding: 100%; */
+    width: 1000px;
+}
+
+/* Individual Cards */
+.card {
+    background: rgba(255, 255, 255, 0.6);
+    /* Semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    /* Laptops */
+    .image-container {
+        padding: 20px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on laptop screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Tablets and mobile */
+    .image-container {
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        /* Stack cards vertically */
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1200px) {
+    .form-container {
+        width: 80%;
+        /* Reduces form width on medium screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        /* Reduces form width on small screens */
+        padding: 30px;
+        /* Adjusts padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 24px;
+        /* Smaller heading for mobile screens */
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 14px;
+        /* Slightly smaller font size for mobile screens */
+        padding: 10px;
+        /* Reduces padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form-container {
+        width: 95%;
+        /* Further reduces form width on very small screens */
+        padding: 20px;
+        /* Adjusts padding further */
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Smaller heading for very small screens */
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 12px;
+        /* Further reduces font size */
+        padding: 8px;
+        /* Reduces padding further */
+    }
+}
+
+
+#contactus {
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.342);
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect: Slightly enlarges the footer */
+#contactus:hover {
+    transform: scale(1.03);
+}
+
+.footer-container h2 {
+    font-size: 22px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.footer-container p {
+    font-size: 16px;
+    color: #212529;
+    margin: 5px 0;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 50%;
+    background: #343a40;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Ensure Icons Are Visible */
+.icon i {
+    color: white;
+    /* Ensures icons are visible */
+}
+
+/* Icon Hover Effects */
+.icon:hover {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contactus {
+        width: 90%;
+        padding: 15px 20px;
+    }
+
+    .footer-container h2 {
+        font-size: 20px;
+    }
+
+    .footer-container p {
+        font-size: 14px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* Contact Us Section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    /* Added padding on left and right */
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    /* Padding inside the form */
+    border-radius: 8px;
+    width: 100%;
+    /* Full width of the container */
+    max-width: 600px;
+    /* Set a larger width for the form */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Added shadow to create separation */
+    position: relative;
+    z-index: 1;
+}
+
+.form-container:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    /* Increased padding for input/textarea */
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"] {
+    height: 40px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004080;
+}
+
+/* Ensure contact section has margin from top to avoid sticking */
+.contact-container {
+    margin-top: 80px;
+    /* Added margin to ensure no overlap with the upper section */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        max-width: 500px;
+        /* Reduce max-width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        max-width: 90%;
+        /* Further reduce max-width on small screens */
+    }
+}
+
+
+
+/* Contact Us Section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    /* Added padding on left and right */
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    /* Padding inside the form */
+    border-radius: 8px;
+    width: 900px;
+    /* Set width to 900px */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Added shadow to create separation */
+    position: relative;
+    z-index: 1;
+}
+
+.form-container:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    /* Increased padding for input/textarea */
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"] {
+    height: 40px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004080;
+}
+
+/* Ensure contact section has margin from top to avoid sticking */
+.contact-container {
+    margin-top: 80px;
+    /* Added margin to ensure no overlap with the upper section */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        max-width: 700px;
+        /* Reduce max-width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        max-width: 90%;
+        /* Further reduce max-width on small screens */
+    }
+}
+
+
+/* Why Choose Us Section */
+#whyus {
+    background-color: rgba(128, 128, 128, 0.674);
+    padding: 50px 5%;
+    /* Adjusted padding for smaller screens */
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+#whyus h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#whyus h3 {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.why-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.why-us-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    height: auto;
+    /* Adjusted height for flexibility */
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-us-card:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .why-us-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-us-card {
+        max-width: 90%;
+    }
+}
+
+/* Card Layout */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background: white;
+}
+
+
+/* Gallery Section */
+.gallery-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Gallery Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    /* Adjusted to match box size */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
